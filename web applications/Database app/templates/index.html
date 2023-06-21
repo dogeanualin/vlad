@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 100px); /* Subtracting header and footer height */
+            text-align: center;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            color: #333;
+            font-size: 18px;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        
+        a:hover {
+            background-color: #555;
+        }
+        
+        .footer {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>DATABASES for Inventory Stocks</h1>
+    </div>
+    
+    <div class="content">
+        <p>Select a database:</p>
+        <ul>
+            <li><a href="/tables/OLAP%20Database">OLAP Database</a></li>
+            <li><a href="/tables/OLTP%20Database">OLTP Database</a></li>
+        </ul>
+    </div>
+    
+    <div class="footer">
+        &copy; 2023 Database Viewer. All rights reserved.
+    </div>
+</body>
+</html>

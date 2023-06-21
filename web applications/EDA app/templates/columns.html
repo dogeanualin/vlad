@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Viewer - Columns</title>
+</head>
+<body>
+    <h1>Database Viewer - Columns</h1>
+    <h2>{{ database }} - {{ table_name }}</h2>
+    <p>Columns:</p>
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Null</th>
+            <th>Key</th>
+            <th>Default</th>
+            <th>Extra</th>
+        </tr>
+        {% for column in columns %}
+        <tr>
+            <td>{{ column[0] }}</td>
+            <td>{{ column[1] }}</td>
+            <td>{{ column[2] }}</td>
+            <td>{{ column[3] }}</td>
+            <td>{{ column[4] }}</td>
+            <td>{{ column[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

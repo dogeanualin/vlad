@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Viewer</title>
+</head>
+<body>
+    <h1>Database Viewer</h1>
+    <h2>Select a database:</h2>
+    <select id="database-select">
+        <option value="OLAP Database">OLAP Database</option>
+        <option value="OLTP Database">OLTP Database</option>
+    </select>
+    <button id="show-tables-btn">Show Tables</button>
+    <div id="tables-frame"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#show-tables-btn').click(function() {
+                var selectedDatabase = $('#database-select').val();
+                $.ajax({
+                    url: '/get_tables',
+                    type: 'POST',
+                    data: {database: selectedDatabase},
+                    success: function(response) {
+                        $('#tables-frame').html(response);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+.custom-loader-arrow1 {
+  width:100px;
+  height:30px;
+  display: flex;
+}
+.custom-loader-arrow1:before {
+  content: "";
+  background: #766DF4;
+  width:15px;
+  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+  animation:  arrow1  1.5s infinite linear;
+}
+@keyframes  arrow1  {
+  90%,100%{flex-grow: 1}
+}
+.custom-loader-arrow2 {
+  width:100px;
+  height:30px;
+  display: flex;
+  justify-content: center;
+}
+.custom-loader-arrow2:before,
+.custom-loader-arrow2:after {
+  content: "";
+  background: #766DF4;
+  width:15px;
+  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+  animation:  arrow2  1s infinite linear;
+}
+
+.custom-loader-arrow2:before {
+  transform: scaleX(-1);
+}
+@keyframes  arrow2  {
+  90%,100%{flex-grow: .5}
+}
+.custom-loader-arrow3 {
+  width:100px;
+  height:30px;
+  display: flex;
+}
+.custom-loader-arrow3:before,
+.custom-loader-arrow3:after {
+  content: "";
+  flex: 1;
+  margin: 0 5px;
+  background: #766DF4;
+  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+  animation:  arrow3  .5s infinite alternate;
+}
+
+.custom-loader-arrow3:after {
+  --s:-1;
+}
+@keyframes  arrow3  {
+  0%  {transform: scaleX(var(--s,1)) translate(-4px)}
+  100%{transform: scaleX(var(--s,1)) translate(4px)}
+}
+.custom-loader-arrow4 {
+  width:40px;
+  height:30px;
+  display:grid;
+}
+.custom-loader-arrow4:before,
+.custom-loader-arrow4:after {
+  content: "";
+  grid-area: 1/1;
+  background: #766DF4;
+  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+  animation:  arrow4  .5s infinite alternate;
+}
+
+.custom-loader-arrow4:after {
+  --s:-1;
+}
+@keyframes  arrow4  {
+  0%  {transform: scale(var(--s,1)) translate(12px,-6px) translate(4px)}
+  100%{transform: scale(var(--s,1)) translate(12px,-6px) translate(-4px)}
+}
+.custom-loader-arrow5 {
+  width:50px;
+  height:30px;
+  display: grid;
+  overflow: hidden;
+}
+.custom-loader-arrow5:before,
+.custom-loader-arrow5:after {
+  content: "";
+  grid-area: 1/1;
+  background: #766DF4;
+  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+  animation:  arrow5  1s infinite;
+  transform: translate(calc(0% + var(--s,0%)));
+}
+
+.custom-loader-arrow5:after {
+  --s:-100%;
+}
+
+@keyframes  arrow5  {
+  80%,100%{transform: translate(calc(100% + var(--s,0%)))}
+}
+.custom-loader-arrow6 {
+  width:50px;
+  height:60px;
+  display: grid;
+}
+.custom-loader-arrow6:before,
+.custom-loader-arrow6:after {
+  content: "";
+  background:
+    linear-gradient(90deg,#766DF4 calc(100% - 15px),#0000 0) 0 50%/100% 10px,
+    conic-gradient(from -136deg at 15px 50%,#0000 ,#766DF4 1deg 90deg,#0000 91deg) 35px 0/100% 100%;
+  background-repeat: repeat-x;
+  animation:  arrow6  1s infinite;
+}
+.custom-loader-arrow6:after {
+  transform: scaleX(-1);
+}
+
+@keyframes  arrow6  {
+  80%,100%{background-position: 50px 50%,85px 0}
+}
+.custom-loader-arrow7 {
+  width:110px;
+  height:30px;
+  display: flex;
+  background: 
+    linear-gradient(#766DF4 0 0) left /30px 10px,
+    linear-gradient(#766DF4 0 0) right/30px 10px,
+    conic-gradient(from -136deg at             15px  50%,#0000 ,#766DF4 1deg 90deg,#0000 91deg) 30px              0/100% 100%,
+    conic-gradient(from   44deg at calc(100% - 15px) 50%,#0000 ,#766DF4 1deg 90deg,#0000 91deg) calc(100% - 30px) 0/100% 100%;
+  background-repeat: no-repeat;
+  animation:  arrow7  .5s infinite alternate;
+}
+.custom-loader-arrow7:before {
+  content: "";
+  flex: 1;
+  background: inherit;
+  transform: rotate(90deg);
+}
+
+@keyframes  arrow7  {
+  90%,100%{width:93px}
+}
+.custom-loader-arrow8 {
+  width:30px;
+  height:30px;
+  display: flex;
+  background: 
+    linear-gradient(#766DF4 0 0) center/calc(100% - 30px) 10px,
+    conic-gradient(from -136deg at right,#0000 ,#766DF4 1deg 90deg,#0000 91deg) right/15px 100%,
+    conic-gradient(from   44deg at left ,#0000 ,#766DF4 1deg 90deg,#0000 91deg) left /15px 100%;
+  background-repeat: no-repeat;
+  animation:  arrow8  .5s infinite alternate;
+}
+.custom-loader-arrow8:before {
+  content: "";
+  flex: 1;
+  background: inherit;
+  transform: rotate(90deg);
+}
+
+@keyframes  arrow8  {
+  90%,100%{width:80px}
+}
+.custom-loader-arrow9 {
+  width:60px;
+  height:30px;
+  display: flex;
+  background: 
+    linear-gradient(#766DF4 0 0) center/calc(100% - 30px) 10px,
+    conic-gradient(from -136deg at right,#0000 ,#766DF4 1deg 90deg,#0000 91deg) right/15px 100%,
+    conic-gradient(from   44deg at left ,#0000 ,#766DF4 1deg 90deg,#0000 91deg) left /15px 100%;
+  background-repeat: no-repeat;
+  animation:  arrow9  .5s infinite linear alternate;
+}
+
+@keyframes  arrow9  {
+  0%   {transform: translate(-30px)}
+  100% {transform: translate(30px)}
+}
+.custom-loader-arrow10 {
+  width:30px;
+  height:60px;
+  padding-top: 60px;
+  display: grid;
+  background: 
+    linear-gradient(#766DF4 0 0) bottom/10px calc(100% - 15px),
+    conic-gradient(from 134deg at top,#0000 ,#766DF4 1deg 90deg,#0000 91deg) top/100% 15px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  animation:  arrow10 -0 2s infinite;
+}
+.custom-loader-arrow10:before,
+.custom-loader-arrow10:after {
+  content: "";
+  grid-area: 1/1;
+  background:inherit;
+  background-size: 10px calc(100% - 25px),100% 25px;
+  animation:  arrow10 -1 2s infinite;
+}
+.custom-loader-arrow10:after {
+  background-size: 10px calc(100% - 30px),100% 30px;
+  animation:  arrow10 -2 2s infinite;
+}
+@keyframes  arrow10 -0 {
+  25%,100% {padding-top:0px}
+}
+
+@keyframes  arrow10 -1 {
+  0%,25%   {margin:60px -10px 0}
+  50%,100% {margin:8px  -10px 0}
+}
+@keyframes  arrow10 -2 {
+  0%,50%   {margin:60px -15px 0}
+  75%,100% {margin:20px -15px 0}
+}

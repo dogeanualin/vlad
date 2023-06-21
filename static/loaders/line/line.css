@@ -1,0 +1,912 @@
+.custom-loader-line1 {
+  width:35px;
+  height:35px;
+  color: #766DF4;
+  --c:linear-gradient(currentColor 0 0);
+  background:
+    var(--c) 0 0,
+    var(--c) 100% 0,
+    var(--c) 100% 100%,
+    var(--c) 0 100%;
+  background-repeat: no-repeat;
+  animation:  line1  1s infinite alternate;
+}
+
+@keyframes  line1  {
+  0%   {background-size: 0    4px,4px 0   ,0    4px,4px 0   }
+  25%  {background-size: 100% 4px,4px 0   ,0    4px,4px 0   }
+  50%  {background-size: 100% 4px,4px 100%,0    4px,4px 0   }
+  75%  {background-size: 100% 4px,4px 100%,100% 4px,4px 0   }
+  90%,
+  100% {background-size: 100% 4px,4px 100%,100% 4px,4px 100%}
+}
+.custom-loader-line2 {
+  width:35px;
+  height:35px;
+  color: #766DF4;
+  --c:linear-gradient(currentColor 0 0);
+  background:
+    var(--c) 0 0,
+    var(--c) 100% 0,
+    var(--c) 100% 100%,
+    var(--c) 0 100%;
+  background-repeat: no-repeat;
+  animation: 
+     line2 -1 2s infinite,
+     line2 -2 2s infinite;
+}
+
+@keyframes  line2 -1 {
+  0%   {background-size: 0    4px,4px 0   ,0    4px,4px 0   }
+  12.5%{background-size: 100% 4px,4px 0   ,0    4px,4px 0   }
+  25%  {background-size: 100% 4px,4px 100%,0    4px,4px 0   }
+  37.5%{background-size: 100% 4px,4px 100%,100% 4px,4px 0   }
+  45%,
+  55%  {background-size: 100% 4px,4px 100%,100% 4px,4px 100%}
+  62.5%{background-size: 0    4px,4px 100%,100% 4px,4px 100%}
+  75%  {background-size: 0    4px,4px 0   ,100% 4px,4px 100%}
+  87.5%{background-size: 0    4px,4px 0   ,0    4px,4px 100%}
+  100% {background-size: 0    4px,4px 0   ,0    4px,4px 0   }
+}
+
+@keyframes  line2 -2 {
+  0%,49.9%{background-position: 0 0   ,100% 0   ,100% 100%,0 100%}
+  50%,100%{background-position: 100% 0,100% 100%,0    100%,0 0   }
+}
+.custom-loader-line3 {
+  width:35px;
+  height:35px;
+  color: #766DF4;
+  --c1:linear-gradient(90deg,#0000 calc(100%/3),currentColor 0 calc(2*100%/3),#0000 0);
+  --c2:linear-gradient( 0deg,#0000 calc(100%/3),currentColor 0 calc(2*100%/3),#0000 0);
+  background:
+    var(--c1),
+    var(--c2),
+    var(--c1),
+    var(--c2);
+  background-size:300% 4px,4px 300%;
+  background-repeat: no-repeat;
+  animation:  line3  1s infinite linear;
+}
+
+@keyframes  line3  {
+  0%   {background-position: 50%  0,100% 100%,0    100%,0 0}
+  25%  {background-position: 0    0,100% 50% ,0    100%,0 0}
+  50%  {background-position: 0    0,100% 0   ,50%  100%,0 0}
+  75%  {background-position: 0    0,100% 0   ,100% 100%,0 50%}
+ 75.01%{background-position: 100% 0,100% 0   ,100% 100%,0 50%}
+  100% {background-position: 50%  0,100% 0   ,100% 100%,0 100%}
+}
+.custom-loader-line4 {
+  width:80px;
+  height:40px;
+  color: #766DF4;
+  --c:linear-gradient(currentColor 0 0);
+  background:
+    var(--c),
+    var(--c),
+    var(--c),
+    var(--c),
+    var(--c),
+    var(--c),
+    var(--c);
+  background-repeat: no-repeat;
+  animation: 
+     line4 -1 1.5s infinite,
+     line4 -2 1.5s infinite;
+}
+
+@keyframes  line4 -1 {
+  0%      {background-size: 0   4px,4px 0  ,0   4px,4px 0   ,0   4px,4px 0  ,0   4px}
+  7.14%   {background-size: 25% 4px,4px 0  ,0   4px,4px 0   ,0   4px,4px 0  ,0   4px}
+  14.29%  {background-size: 25% 4px,4px 50%,0   4px,4px 0   ,0   4px,4px 0  ,0   4px}
+  21.43%  {background-size: 25% 4px,4px 50%,25% 4px,4px 0   ,0   4px,4px 0  ,0   4px}
+  28.57%  {background-size: 25% 4px,4px 50%,25% 4px,4px 100%,0   4px,4px 0  ,0   4px}
+  35.71%  {background-size: 25% 4px,4px 50%,25% 4px,4px 100%,25% 4px,4px 0  ,0   4px}
+  42.86%  {background-size: 25% 4px,4px 50%,25% 4px,4px 100%,25% 4px,4px 50%,0   4px}
+  49%,
+  51%     {background-size: 25% 4px,4px 50%,25% 4px,4px 100%,25% 4px,4px 50%,25% 4px}
+  57.14%  {background-size: 0   4px,4px 50%,25% 4px,4px 100%,25% 4px,4px 50%,25% 4px}
+  64.29%  {background-size: 0   4px,4px 0  ,25% 4px,4px 100%,25% 4px,4px 50%,25% 4px}
+  71.43%  {background-size: 0   4px,4px 0  ,0   4px,4px 100%,25% 4px,4px 50%,25% 4px}
+  78.57%  {background-size: 0   4px,4px 0  ,0   4px,4px 0   ,25% 4px,4px 50%,25% 4px}
+  85.71%  {background-size: 0   4px,4px 0  ,0   4px,4px 0   ,0   4px,4px 50%,25% 4px}
+  92.86%  {background-size: 0   4px,4px 0  ,0   4px,4px 0   ,0   4px,4px 0  ,25% 4px}
+  100%    {background-size: 0   4px,4px 0  ,0   4px,4px 0   ,0   4px,4px 0  ,0   4px}
+}
+@keyframes  line4 -2 {
+  0%,49.9% {background-position:0 50%,bottom 20px left 16px,20px 0,50% 0,40px 100%,bottom 0 right 16px,60px 50% }
+  50%,100% {background-position:right 60px top 50%,16px 0,right 40px top 0,50% 100%,right 20px bottom 0,right 16px top 20px,100% 50%}
+}
+.custom-loader-line5 {
+  width:40px;
+  height:40px;
+  color: #766DF4;
+  --c:linear-gradient(currentColor 0 0);
+  background:
+    var(--c) 0 50%,
+    var(--c) right 0 bottom 20px,
+    var(--c) 100% 0,
+    var(--c) 50% 0,
+    var(--c) right 20px bottom 0,
+    var(--c) 0 100%;
+  background-repeat: no-repeat;
+  animation:  line5  1.5s infinite alternate;
+}
+
+
+@keyframes  line5  {
+  0%     {background-size: 0    4px,4px 0  ,0   4px,4px 0   ,0    4px,4px 0   }
+  16.67% {background-size: 100% 4px,4px 0  ,0   4px,4px 0   ,0    4px,4px 0   }
+  33.33% {background-size: 100% 4px,4px 50%,0   4px,4px 0   ,0    4px,4px 0   }
+  50%    {background-size: 100% 4px,4px 50%,50% 4px,4px 0   ,0    4px,4px 0   }
+  66.67% {background-size: 100% 4px,4px 50%,50% 4px,4px 100%,0    4px,4px 0   }
+  83.33% {background-size: 100% 4px,4px 50%,50% 4px,4px 100%,50%  4px,4px 0   }
+  95%,
+  100%   {background-size: 100% 4px,4px 50%,50% 4px,4px 100%,50%  4px,4px 50% }
+}
+.custom-loader-line6 {
+  width:40px;
+  height:40px;
+  color: #766DF4;
+  --c:linear-gradient(currentColor 0 0);
+  background:
+    var(--c),
+    var(--c),
+    var(--c),
+    var(--c),
+    var(--c),
+    var(--c);
+  background-repeat: no-repeat;
+  animation: 
+     line6 -1 2s infinite,
+     line6 -2 2s infinite;
+}
+
+@keyframes  line6 -1 {
+  0%     {background-size: 0    4px,4px 0  ,0   4px,4px 0   ,0   4px,4px 0  }
+  8.33%  {background-size: 100% 4px,4px 0  ,0   4px,4px 0   ,0   4px,4px 0  }
+  16.67% {background-size: 100% 4px,4px 50%,0   4px,4px 0   ,0   4px,4px 0  }
+  25%    {background-size: 100% 4px,4px 50%,50% 4px,4px 0   ,0   4px,4px 0  }
+  33.33% {background-size: 100% 4px,4px 50%,50% 4px,4px 100%,0   4px,4px 0  }
+  41.67% {background-size: 100% 4px,4px 50%,50% 4px,4px 100%,50% 4px,4px 0  }
+  48%,
+  52%    {background-size: 100% 4px,4px 50%,50% 4px,4px 100%,50% 4px,4px 50%}
+  58.33% {background-size: 0    4px,4px 50%,50% 4px,4px 100%,50% 4px,4px 50%}
+  66.67% {background-size: 0    4px,4px 0  ,50% 4px,4px 100%,50% 4px,4px 50%}
+  75%    {background-size: 0    4px,4px 0  ,0   4px,4px 100%,50% 4px,4px 50%}
+  83.33% {background-size: 0    4px,4px 0  ,0   4px,4px 0   ,50% 4px,4px 50%}
+  91.67% {background-size: 0    4px,4px 0  ,0   4px,4px 0   ,0   4px,4px 50%}
+  100%   {background-size: 0    4px,4px 0  ,0   4px,4px 0   ,0   4px,4px 0}
+}
+@keyframes  line6 -2 {
+  0%,49.9% {background-position: 0    50%,right 0 bottom 20px,100% 0,50% 0,right 20px bottom 0,0 100%}
+  50%,100% {background-position: 100% 50%,100% 0,left 20px top 0,50% 100%,0 100%,0 20px}
+}
+.custom-loader-line7 {
+  width:60px;
+  height:60px;
+  color: #766DF4;
+  --c:linear-gradient(currentColor 0 0);
+  background:
+    var(--c) 0 38px,
+    var(--c) right 18px bottom 18px,
+    var(--c) right 18px top    18px,
+    var(--c) 18px 18px,
+    var(--c) 18px 100%,
+    var(--c) 100% 100%,
+    var(--c) 100% 0,
+    var(--c) 0 0;
+  background-repeat: no-repeat;
+  animation:  line7  1.5s infinite alternate;
+}
+
+@keyframes  line7  {
+  0%    {background-size: 0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   }
+  12.5% {background-size: 40px 4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   }
+  25%   {background-size: 40px 4px,4px 20px,0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   }
+  37.5% {background-size: 40px 4px,4px 20px,20px 4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   }
+  50%   {background-size: 40px 4px,4px 20px,20px 4px,4px 40px,0    4px,4px 0   ,0    4px,4px 0   }
+  62.5% {background-size: 40px 4px,4px 20px,20px 4px,4px 40px,40px 4px,4px 0   ,0    4px,4px 0   }
+  75%   {background-size: 40px 4px,4px 20px,20px 4px,4px 40px,40px 4px,4px 100%,0    4px,4px 0   }
+  87.5% {background-size: 40px 4px,4px 20px,20px 4px,4px 40px,40px 4px,4px 100%,100% 4px,4px 0   }
+  95%,
+  100%  {background-size: 40px 4px,4px 20px,20px 4px,4px 40px,40px 4px,4px 100%,100% 4px,4px 40px}
+}
+.custom-loader-line8 {
+  width:60px;
+  height:60px;
+  color: #766DF4;
+  --c:linear-gradient(currentColor 0 0);
+  background:
+    var(--c) 0 38px,
+    var(--c) right 18px bottom 18px,
+    var(--c) right 18px top    18px,
+    var(--c) 18px 18px,
+    var(--c) 18px 100%,
+    var(--c) 100% 100%,
+    var(--c) 100% 0,
+    var(--c) 0 0;
+  background-repeat: no-repeat;
+  animation: 
+     line8 -1 2s infinite,
+     line8 -2 2s infinite;
+}
+
+@keyframes  line8 -1 {
+  0%     {background-size: 0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   }
+  6.25%  {background-size: 40px 4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   }
+  12.5%  {background-size: 40px 4px,4px 20px,0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   }
+  18.75% {background-size: 40px 4px,4px 20px,20px 4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   }
+  25%    {background-size: 40px 4px,4px 20px,20px 4px,4px 40px,0    4px,4px 0   ,0    4px,4px 0   }
+  31.25% {background-size: 40px 4px,4px 20px,20px 4px,4px 40px,40px 4px,4px 0   ,0    4px,4px 0   }
+  37.5%  {background-size: 40px 4px,4px 20px,20px 4px,4px 40px,40px 4px,4px 100%,0    4px,4px 0   }
+  43.75% {background-size: 40px 4px,4px 20px,20px 4px,4px 40px,40px 4px,4px 100%,100% 4px,4px 0   }
+  48%,
+  52%    {background-size: 40px 4px,4px 20px,20px 4px,4px 40px,40px 4px,4px 100%,100% 4px,4px 40px}
+  56.25% {background-size: 0    4px,4px 20px,20px 4px,4px 40px,40px 4px,4px 100%,100% 4px,4px 40px}
+  62.5%  {background-size: 0    4px,4px 0   ,20px 4px,4px 40px,40px 4px,4px 100%,100% 4px,4px 40px}
+  68.75% {background-size: 0    4px,4px 0   ,0    4px,4px 40px,40px 4px,4px 100%,100% 4px,4px 40px}
+  75%    {background-size: 0    4px,4px 0   ,0    4px,4px 0   ,40px 4px,4px 100%,100% 4px,4px 40px}
+  81.25% {background-size: 0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 100%,100% 4px,4px 40px}
+  87.5%  {background-size: 0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   ,100% 4px,4px 40px}
+  93.75% {background-size: 0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 40px}
+  100%   {background-size: 0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   ,0    4px,4px 0   }
+}
+
+@keyframes  line8 -2 {
+  0%,49.9% {background-position:0 38px, right 18px bottom 18px, right 18px top 18px,18px 18px,18px 100%,100% 100%,100% 0,0 0}
+  50%,100% {background-position:right 18px bottom 18px, right 18px top 18px, 18px 18px,18px 100%,100% 100%,100% 0,0 0,bottom 18px left 0}
+}
+.custom-loader-line9 {
+  width:60px;
+  height:60px;
+  color: #766DF4;
+  --c:linear-gradient(currentColor 0 0);
+  background:
+    var(--c),
+    var(--c),
+    var(--c),
+    var(--c);
+  background-repeat: no-repeat;
+  animation: 
+     line9 -1 1.5s infinite,
+     line9 -2 1.5s infinite;
+}
+@keyframes  line9 -1 {
+  0%   {background-size: 0    4px,4px 0   }
+  25%  {background-size: 40px 4px,4px 0   }
+  45%,
+  55%  {background-size: 40px 4px,4px 42px}
+  75%  {background-size: 0    4px,4px 42px}
+  100% {background-size: 0    4px,4px 0   }
+}
+@keyframes  line9 -2 {
+  0%,49.9% {background-position: 0  38px               ,18px 18px,100% 18px,right 18px bottom 18px}
+  50%,100% {background-position: right 20px bottom 18px,18px 100%,20px 18px,right 18px top 0      }
+}
+.custom-loader-line10 {
+  width:40px;
+  height:40px;
+  color: #766DF4;
+  display: grid;
+}
+.custom-loader-line10::before,
+.custom-loader-line10::after {
+  content: "";
+  grid-area: 1/1;
+  --c:linear-gradient(currentColor 0 0);
+  background:
+    var(--c) 0 0,
+    var(--c) 100% 0,
+    var(--c) 100% 100%,
+    var(--c) 0 100%;
+  background-repeat: no-repeat;
+  animation: 
+     line10 -1 2s infinite linear,
+     line10 -2 2s infinite linear;
+}
+.custom-loader-line10::after {
+  margin:10px;
+  transform: scale(-1);
+}
+
+@keyframes  line10 -1 {
+  0%   {background-size: 0    4px,4px 0   ,0    4px,4px 0   }
+  12.5%{background-size: 100% 4px,4px 0   ,0    4px,4px 0   }
+  25%  {background-size: 100% 4px,4px 100%,0    4px,4px 0   }
+  37.5%{background-size: 100% 4px,4px 100%,100% 4px,4px 0   }
+  45%,
+  55%  {background-size: 100% 4px,4px 100%,100% 4px,4px 100%}
+  62.5%{background-size: 0    4px,4px 100%,100% 4px,4px 100%}
+  75%  {background-size: 0    4px,4px 0   ,100% 4px,4px 100%}
+  87.5%{background-size: 0    4px,4px 0   ,0    4px,4px 100%}
+  100% {background-size: 0    4px,4px 0   ,0    4px,4px 0   }
+}
+
+@keyframes  line10 -2 {
+  0%,49.9%{background-position: 0 0   ,100% 0   ,100% 100%,0 100%}
+  50%,100%{background-position: 100% 0,100% 100%,0    100%,0 0   }
+}
+.custom-loader-line11 {
+  width:50px;
+  height:50px;
+  display: grid;
+  color: #766DF4;
+}
+
+.custom-loader-line11:before,
+.custom-loader-line11:after {
+  content: "";
+  grid-area: 1/1;
+  --c1:linear-gradient(90deg,#0000 calc(100%/3),currentColor 0 calc(2*100%/3),#0000 0);
+  --c2:linear-gradient( 0deg,#0000 calc(100%/3),currentColor 0 calc(2*100%/3),#0000 0);
+  background:
+    var(--c1),
+    var(--c2),
+    var(--c1),
+    var(--c2);
+  background-size:300% 4px,4px 300%;
+  background-repeat: no-repeat;
+  animation:  line11  1s infinite linear;
+}
+.custom-loader-line11:after {
+  margin: 10px;
+  transform: scaleX(-1);
+  animation-delay: -.25s;
+}
+
+@keyframes  line11  {
+  0%   {background-position: 50%  0,100% 100%,0    100%,0 0}
+  25%  {background-position: 0    0,100% 50% ,0    100%,0 0}
+  50%  {background-position: 0    0,100% 0   ,50%  100%,0 0}
+  75%  {background-position: 0    0,100% 0   ,100% 100%,0 50%}
+ 75.01%{background-position: 100% 0,100% 0   ,100% 100%,0 50%}
+  100% {background-position: 50%  0,100% 0   ,100% 100%,0 100%}
+}
+.custom-loader-line12 {
+  width:50px;
+  height:50px;
+  display: grid;
+  color: #766DF4;
+}
+
+.custom-loader-line12:before,
+.custom-loader-line12:after {
+  content: "";
+  grid-area: 1/1;
+  margin: 0 0 15px 15px;
+  --c1:linear-gradient(90deg,#0000 calc(100%/3),currentColor 0 calc(2*100%/3),#0000 0);
+  --c2:linear-gradient( 0deg,#0000 calc(100%/3),currentColor 0 calc(2*100%/3),#0000 0);
+  background:
+    var(--c1),
+    var(--c2),
+    var(--c1),
+    var(--c2);
+  background-size:300% 4px,4px 300%;
+  background-repeat: no-repeat;
+  animation:  line12  1s infinite linear;
+}
+.custom-loader-line12:after {
+  margin: 15px 15px 0 0;
+  transform: scale(-1,-1);
+}
+
+@keyframes  line12  {
+  0%   {background-position: 50%  0,100% 100%,0    100%,0 0}
+  25%  {background-position: 0    0,100% 50% ,0    100%,0 0}
+  50%  {background-position: 0    0,100% 0   ,50%  100%,0 0}
+  75%  {background-position: 0    0,100% 0   ,100% 100%,0 50%}
+ 75.01%{background-position: 100% 0,100% 0   ,100% 100%,0 50%}
+  100% {background-position: 50%  0,100% 0   ,100% 100%,0 100%}
+}
+.custom-loader-line13 {
+  width: 80px;
+  height: 40px;
+  display: flex;
+  color: #766DF4;
+}
+.custom-loader-line13:before,
+.custom-loader-line13:after {
+  content: "";
+  margin:0 -2px 0 0;
+  flex: 1;
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation:  line13 -1 1s infinite linear,  line13 -2 1s infinite linear;
+}
+.custom-loader-line13:after {
+  transform: scale(-1);
+  margin:0 0 0 -2px;
+}
+
+@keyframes  line13 -1 {
+  0%,
+  3%   {background-size: 0   4px,4px 0  ,0   4px,4px 0  }
+  12.5%{background-size: 50% 4px,4px 0  ,0   4px,4px 0  }
+  25%  {background-size: 50% 4px,4px 50%,0   4px,4px 0  }
+  37.5%{background-size: 50% 4px,4px 50%,50% 4px,4px 0  }
+  46%,
+  54%  {background-size: 50% 4px,4px 50%,50% 4px,4px 50%}
+  62.5%{background-size: 0   4px,4px 50%,50% 4px,4px 50%}
+  75%  {background-size: 0   4px,4px 0  ,50% 4px,4px 50%}
+  87.5%{background-size: 0   4px,4px 0  ,0   4px,4px 50%}
+  96%,
+  100% {background-size: 0   4px,4px 0  ,0   4px,4px 0  }
+}
+
+@keyframes  line13 -2 {
+  0%,49.9%{background-position:0              20px,50% 20px,20px 100%,100% 100%}
+  50%,100%{background-position:right 20px top 20px,50% 100%,100% 100%,100% 20px}
+}
+.custom-loader-line14 {
+  width: 60px;
+  height: 30px;
+  display: grid;
+  color: #766DF4;
+}
+.custom-loader-line14:before,
+.custom-loader-line14:after {
+  content: "";
+  grid-area: 1/1;
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation:  line14 -1 1s infinite linear,  line14 -2 1s infinite linear;
+}
+.custom-loader-line14:after {
+  transform: scale(-1);
+}
+
+@keyframes  line14 -1 {
+  0%,
+  3%    {background-size: 0               4px,4px 0   ,0               4px}
+  16.67%{background-size: calc(50% - 6px) 4px,4px 0   ,0               4px}
+  33.33%{background-size: calc(50% - 6px) 4px,4px 14px,0               4px}
+  46%,
+  54%   {background-size: calc(50% - 6px) 4px,4px 14px,calc(50% + 6px) 4px}
+  66.67%{background-size: 0               4px,4px 14px,calc(50% + 6px) 4px}
+  83.33%{background-size: 0               4px,4px 0   ,calc(50% + 6px) 4px}
+  96%,
+  100%  {background-size: 0               4px,4px 0   ,0               4px}
+}
+
+
+@keyframes  line14 -2 {
+  0%,49.9%{background-position:0              50%,left calc(50% - 6px) bottom 13px,left  24px top 3px}
+  50%,100%{background-position:right 36px top 50%,left calc(50% - 6px) top     3px,right 0    top 3px}
+}
+.custom-loader-line15 {
+  width:60px;
+  height:20px;
+  display: grid;
+  color: #766DF4;
+}
+
+.custom-loader-line15:before,
+.custom-loader-line15:after {
+  content: "";
+  grid-area: 1/1;
+  --c1:linear-gradient(90deg,#0000 calc(100%/3),currentColor 0 calc(2*100%/3),#0000 0);
+  --c2:linear-gradient( 0deg,#0000 calc(100%/3),currentColor 0 calc(2*100%/3),#0000 0);
+  background:
+    var(--c1),
+    var(--c2),
+    var(--c1),
+    var(--c2);
+  background-size:300% 4px,4px 300%;
+  background-repeat: no-repeat;
+  animation:  line15  1.5s infinite;
+}
+.custom-loader-line15:after {
+  animation-delay: -.75s;
+}
+
+@keyframes  line15  {
+  0%   {background-position: 50%  0,100% 100%,0    100%,0 0}
+  25%  {background-position: 0    0,100% 50% ,0    100%,0 0}
+  50%  {background-position: 0    0,100% 0   ,50%  100%,0 0}
+  75%  {background-position: 0    0,100% 0   ,100% 100%,0 50%}
+ 75.01%{background-position: 100% 0,100% 0   ,100% 100%,0 50%}
+  100% {background-position: 50%  0,100% 0   ,100% 100%,0 100%}
+}
+.custom-loader-line16 {
+  width:60px;
+  height:16px;
+  display: grid;
+  color: #766DF4;
+}
+
+.custom-loader-line16:before,
+.custom-loader-line16:after {
+  content: "";
+  grid-area: 1/1;
+  --c: linear-gradient(currentColor 0 0);
+  background: var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation:  line16 -1 1.5s infinite linear,  line16 -2 1.5s infinite linear;
+  transform: scale(var(--s,1)) translate(3px,-3px);
+}
+.custom-loader-line16:after {
+  --s:-1;
+}
+
+@keyframes  line16 -1 {
+  0%,
+  3%    {background-size: 0    4px,4px 0   ,0    4px}
+  16.67%{background-size: 100% 4px,4px 0   ,0    4px}
+  33.33%{background-size: 100% 4px,4px 100%,0    4px}
+  46%,
+  54%   {background-size: 100% 4px,4px 100%,100% 4px}
+  66.67%{background-size: 0    4px,4px 100%,100% 4px}
+  83.33%{background-size: 0    4px,4px 0   ,100% 4px}
+  96%,
+  100%  {background-size: 0    4px,4px 0   ,0    4px}
+}
+
+@keyframes  line16 -2 {
+  0%,49.9%{background-position: 0    0,100% 0   ,100% 100%}
+  50%,100%{background-position: 100% 0,100% 100%,0    100%}
+}
+.custom-loader-line17 {
+  width:50px;
+  height:50px;
+  display: flex;
+  color: #766DF4;
+}
+
+.custom-loader-line17:before,
+.custom-loader-line17:after {
+  content: "";
+  flex: 1;
+  margin:0 0 0 -2px;
+  --c: linear-gradient(currentColor 0 0);
+  background: 
+    var(--c) 0    0, 
+    var(--c) 100% 0, 
+    var(--c) 100% 100%, 
+    var(--c) 0    100%, 
+    var(--c) 0    50%;
+  background-repeat: no-repeat;
+  animation:  line17  1s infinite alternate;
+}
+.custom-loader-line17:before {
+  transform: scale(-1);
+  margin:0 -2px 0 0;
+}
+
+@keyframes  line17  {
+  0%,
+  5%   {background-size: 0    4px,4px 0   ,0    4px,4px 0   ,0    4px}
+  20%  {background-size: 100% 4px,4px 0   ,0    4px,4px 0   ,0    4px}
+  40%  {background-size: 100% 4px,4px 100%,0    4px,4px 0   ,0    4px}
+  60%  {background-size: 100% 4px,4px 100%,100% 4px,4px 0   ,0    4px}
+  80%  {background-size: 100% 4px,4px 100%,100% 4px,4px 50% ,0    4px}
+  95%,
+  100% {background-size: 100% 4px,4px 100%,100% 4px,4px 50% ,100% 4px}
+}
+.custom-loader-line18 {
+  width:60px;
+  height:60px;
+  padding:10px;
+  display: grid;
+  color: #766DF4;
+}
+.custom-loader-line18,
+.custom-loader-line18:before,
+.custom-loader-line18:after {
+  --c: linear-gradient(currentColor 0 0);
+  background:var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation:  line18 -1 1.5s infinite  cubic-bezier(0,0,1,1),  line18 -2 1.5s infinite;
+}
+.custom-loader-line18:before,
+.custom-loader-line18:after {
+  content: "";
+  grid-area: 1/1;
+  animation-timing-function: cubic-bezier(0,0.2,1,1),linear;
+}
+
+.custom-loader-line18:after {
+  margin: 10px;
+  animation-timing-function: cubic-bezier(0,0.4,1,1),linear;
+}
+
+@keyframes  line18 -1 {
+  0%,
+  10%   {background-size: 0    4px,4px 0 }
+  40%,
+  60%   {background-size: 100% 4px,4px 100%}
+  90%,
+  100%  {background-size: 0    4px,4px 0  }
+}
+
+@keyframes  line18 -2 {
+  0%,49.9%{background-position: 0    0,0    0,100% 100%,100% 100%}
+  50%,100%{background-position: 100% 0,0 100%,0    100%,100% 0}
+}
+.custom-loader-line19 {
+  width:30px;
+  height:30px;
+  display: grid;
+  color: #766DF4;
+}
+.custom-loader-line19,
+.custom-loader-line19:before,
+.custom-loader-line19:after {
+  --c: linear-gradient(currentColor 0 0);
+  background:var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation:  line19 -1 1.5s infinite,  line19 -2 1.5s infinite;
+}
+.custom-loader-line19:before,
+.custom-loader-line19:after {
+  content: "";
+  grid-area: 1/1;
+  transform: translate(calc(50% - 2px),calc(2px - 50%)) rotate(90deg);
+  animation-delay: -.25s;
+}
+.custom-loader-line19:after {
+  transform: translate(calc(2px - 50%),calc(50% - 2px)) rotate(90deg);
+}
+
+
+@keyframes  line19 -1 {
+  0%,
+  10%   {background-size: 0    4px,4px 0 }
+  40%,
+  60%   {background-size: 100% 4px,4px 100%}
+  90%,
+  100%  {background-size: 0    4px,4px 0  }
+}
+
+@keyframes  line19 -2 {
+  0%,49.9%{background-position: 0    0,0    0,100% 100%,100% 100%}
+  50%,100%{background-position: 100% 0,0 100%,0    100%,100% 0}
+}
+.custom-loader-line20 {
+  width:25px;
+  height:25px;
+  display: grid;
+  color: #766DF4;
+}
+
+.custom-loader-line20,
+.custom-loader-line20:before,
+.custom-loader-line20:after {
+  --c: linear-gradient(currentColor 0 0);
+  background:var(--c), var(--c), var(--c), var(--c);
+  background-repeat: no-repeat;
+  animation:  line20 -1 1.5s infinite linear,  line20 -2 1.5s infinite linear;
+}
+
+.custom-loader-line20:before,
+.custom-loader-line20:after {
+  content: "";
+  grid-area: 1/1;
+  transform: translate(calc(100% - 4px),calc(4px - 100%)) rotate(90deg);
+}
+.custom-loader-line20:after {
+  transform: translate(calc(4px - 100%),calc(100% - 4px)) rotate(-90deg);
+}
+
+@keyframes  line20 -1 {
+  0%   {background-size: 0    4px,4px 0   ,0    4px,4px 0   }
+  12.5%{background-size: 100% 4px,4px 0   ,0    4px,4px 0   }
+  25%  {background-size: 100% 4px,4px 100%,0    4px,4px 0   }
+  37.5%{background-size: 100% 4px,4px 100%,100% 4px,4px 0   }
+  43%,
+  57%  {background-size: 100% 4px,4px 100%,100% 4px,4px 100%}
+  62.5%{background-size: 0    4px,4px 100%,100% 4px,4px 100%}
+  75%  {background-size: 0    4px,4px 0   ,100% 4px,4px 100%}
+  87.5%{background-size: 0    4px,4px 0   ,0    4px,4px 100%}
+  100% {background-size: 0    4px,4px 0   ,0    4px,4px 0   }
+}
+
+@keyframes  line20 -2 {
+  0%,49.9%{background-position: 0 0   ,100% 0   ,100% 100%,0 100%}
+  50%,100%{background-position: 100% 0,100% 100%,0    100%,0 0   }
+}
+.custom-loader-line21 {
+  height: 9px;
+  width: 60px;
+  --c:linear-gradient(#766DF4 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t1 1s infinite;
+}
+
+@keyframes t1 {
+  0%,
+  70%,
+  100%   {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+  11.67% {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+  23.33% {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 0   ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+  35%    {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 100%,calc(2*100%/3) 0   ,calc(3*100%/3) 50% }
+  46.67% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 100%,calc(3*100%/3) 0   }
+  58.34% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 100%}
+}
+.custom-loader-line22 {
+  height: 9px;
+  width: 60px;
+  --c:linear-gradient(#766DF4 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t2 1s infinite;
+}
+
+@keyframes t2 {
+  0%,
+  70%,
+  100% {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+  14%  {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+  28%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 0   ,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+  42%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 0   ,calc(3*100%/3) 100%}
+  56%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 0   }
+}
+.custom-loader-line23 {
+  height: 9px;
+  width: 60px;
+  --c:linear-gradient(#766DF4 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t3 1s infinite;
+}
+
+@keyframes t3 {
+  0%,
+  10%   {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+  17.5% {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+  25%   {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 0   ,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+  32.5% {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 0   ,calc(2*100%/3) 0   ,calc(3*100%/3) 100%}
+  40%,
+  60%   {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 0   ,calc(2*100%/3) 0   ,calc(3*100%/3) 0   }
+  67.5% {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 0   ,calc(2*100%/3) 0   ,calc(3*100%/3) 0   }
+  75%   {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 0   ,calc(3*100%/3) 0   }
+  82.5% {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 0   }
+  90%,
+  100%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+}
+.custom-loader-line24 {
+  height: 15px;
+  width: 60px;
+  --c:repeating-linear-gradient(#0000 0 6px,#766DF4 0 9px,#0000 0 15px);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 200%;
+  background-repeat: no-repeat;
+  animation: t4 1.5s infinite linear;
+}
+
+@keyframes t4 {
+  0%,
+  70%,
+  100%  {background-position: calc(0*100%/3) 100%,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+  17.5% {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 100%,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+  35%   {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 0   ,calc(2*100%/3) 100%,calc(3*100%/3) 100%}
+  52.5% {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 0   ,calc(2*100%/3) 0   ,calc(3*100%/3) 100%}
+  69.99%{background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 0   ,calc(2*100%/3) 0   ,calc(3*100%/3) 0   }
+}
+.custom-loader-line25 {
+  height: 9px;
+  width: 60px;
+  --c:linear-gradient(#766DF4 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t5 1s infinite;
+}
+
+@keyframes t5 {
+  0%,
+  70%,
+  100% {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+  12.5%{background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 50% ,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+  25%  {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 100%,calc(2*100%/3) 50% ,calc(3*100%/3) 50% }
+  37.5%{background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 100%,calc(2*100%/3) 0   ,calc(3*100%/3) 50% }
+  50%,
+  60%  {background-position: calc(0*100%/3) 0   ,calc(1*100%/3) 100%,calc(2*100%/3) 0   ,calc(3*100%/3) 100%}
+}
+.custom-loader-line26 {
+  height: 9px;
+  width: 60px;
+  --c:linear-gradient(#766DF4 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t6 1s infinite;
+}
+
+@keyframes t6 {
+  0%,
+  70%,
+  100%  {background-position: calc(0*100%/3) 50%,calc(1*100%/3) 50% ,calc(2*100%/3) 50%,calc(3*100%/3) 50% }
+  23.33%{background-position: calc(0*100%/3) 0  ,calc(1*100%/3) 100%,calc(2*100%/3) 0  ,calc(3*100%/3) 100%}
+  46.67%{background-position: calc(1*100%/3) 0  ,calc(0*100%/3) 100%,calc(3*100%/3) 0  ,calc(2*100%/3) 100%}
+  69.99%{background-position: calc(1*100%/3) 50%,calc(0*100%/3) 50% ,calc(3*100%/3) 50%,calc(2*100%/3) 50% }
+}
+.custom-loader-line27 {
+  height: 3px;
+  width: 75px;
+  --c:linear-gradient(#766DF4 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 21% 100%;
+  background-repeat: no-repeat;
+  animation: t7 1s infinite alternate;
+}
+
+@keyframes t7 {
+  0%,
+  20%  {background-position: calc(0*100%/4) 0,calc(1*100%/4) 0,calc(2*100%/4) 0,calc(3*100%/4) 0}
+  35%  {background-position: calc(0*100%/4) 0,calc(1*100%/4) 0,calc(2*100%/4) 0,calc(4*100%/4) 0}
+  50%  {background-position: calc(0*100%/4) 0,calc(1*100%/4) 0,calc(3*100%/4) 0,calc(4*100%/4) 0}
+  65%  {background-position: calc(0*100%/4) 0,calc(2*100%/4) 0,calc(3*100%/4) 0,calc(4*100%/4) 0}
+  80%,
+  100% {background-position: calc(1*100%/4) 0,calc(2*100%/4) 0,calc(3*100%/4) 0,calc(4*100%/4) 0}
+}
+.custom-loader-line28 {
+  height: 12px;
+  width: 60px;
+  --c:linear-gradient(#766DF4 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 26% 3px;
+  background-repeat: no-repeat;
+  animation: t8 1s infinite;
+}
+
+@keyframes t8 {
+  0%,
+  70%,
+  100%  {background-position: calc(0*100%/3) 50% ,calc(1*100%/3) 50%,calc(2*100%/3) 50%,calc(3*100%/3) 50%}
+  23.33%{background-position: calc(0*100%/3) 100%,calc(1*100%/3) 66%,calc(2*100%/3) 33%,calc(3*100%/3) 0  }
+  46.67%{background-position: calc(3*100%/3) 100%,calc(2*100%/3) 66%,calc(1*100%/3) 33%,calc(0*100%/3) 0  }
+  69.99%{background-position: calc(3*100%/3) 50% ,calc(2*100%/3) 50%,calc(1*100%/3) 50%,calc(0*100%/3) 50%}
+}
+.custom-loader-line29 {
+  height: 6px;
+  width: 60px;
+  --c:repeating-linear-gradient(90deg,#766DF4 0 3px,#0000 0 6px);
+  background: var(--c), var(--c);
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  animation: t9 1s infinite;
+}
+@keyframes t9 {
+  0%,
+  70%,
+  100%   {background-position: 0   50%,3px 50% }
+  23.33% {background-position: 0   0  ,3px 100%}
+  46.67% {background-position: 3px 0  ,0   100%}
+  69.99% {background-position: 3px 50%,0   50% }
+}
+.custom-loader-line30 {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(#766DF4 0 0) right/51% 100% no-repeat;
+  display: flex;
+  animation: t10-0 2s linear infinite;
+}
+.custom-loader-line30:before,
+.custom-loader-line30:after {
+  content: "";
+  width:15px;
+  background:#766DF4;
+  animation: t10-1 2s linear infinite;
+}
+.custom-loader-line30:after {
+  animation-delay: -1s;
+  --s:-1;
+}
+
+@keyframes t10-1 {
+  0%,100%{transform:scaleX(var(--s,1)) rotate(0)}
+  25%,75%   {transform:scaleX(var(--s,1)) rotate(180deg)}
+}
+
+@keyframes t10-0 {
+  0%,49.9%{transform:scaleX( 1)}
+  50%,100%{transform:scaleX(-1)}
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Analysis Visualization</title>
+</head>
+<body>
+    <div>
+        <h1>Data Analysis Visualization</h1>
+        <div>
+            <button onclick="plotDataDistribution()">Order Day of Week</button>
+            <button onclick="plotProductAnalysis()">Top Ordered Products</button>
+            <button onclick="plotOrderAnalysis()">Order Hour of Day</button>
+            <button onclick="plotUserAnalysis()">Days Since Prior Order</button>
+            <button onclick="plotCorrelationHeatmap()">Correlation Chart</button>
+            <button onclick="plotReorderRate()">Reorder Rate</button>
+            <button onclick="plotOrderAnalysisTrends()">Order Analysis Trends</button>
+            <button onclick="plotProductsWordcloud()">Products Wordcloud</button>
+        </div>
+        <div id="visualization"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function plotDataDistribution() {
+            $.ajax({
+                url: "/plot_data_distribution",
+                success: function(data) {
+                    var img = document.createElement("img");
+                    img.src = 'data:image/png;base64,' + data;
+                    document.getElementById("visualization").innerHTML = "";
+                    document.getElementById("visualization").appendChild(img);
+                }
+            });
+        }
+
+        function plotProductAnalysis() {
+            $.ajax({
+                url: "/plot_product_analysis",
+                success: function(data) {
+                    var img = document.createElement("img");
+                    img.src = 'data:image/png;base64,' + data;
+                    document.getElementById("visualization").innerHTML = "";
+                    document.getElementById("visualization").appendChild(img);
+                }
+            });
+        }
+
+        // Define other functions for different visualizations similarly
+
+        // Remember to update the function names in the JavaScript code to match the Flask routes in `app.py`.
+    </script>
+</body>
+</html>

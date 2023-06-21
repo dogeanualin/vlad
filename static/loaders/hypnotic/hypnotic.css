@@ -1,0 +1,450 @@
+.custom-loader-hypnotic1 {
+  width:50px;
+  height:50px;
+  border:2px solid #766DF4;
+  display: grid;
+  animation:  hypnotic1  4s infinite linear;
+}
+.custom-loader-hypnotic1::before,
+.custom-loader-hypnotic1::after {
+  content: "";
+  grid-area: 1/1;
+  margin:auto;
+  width:70.7%;
+  height:70.7%; 
+  border:2px solid #766DF4;
+  animation: inherit;
+}
+.custom-loader-hypnotic1::after {
+  width:50%;
+  height:50%;
+  border:2px solid #766DF4;
+  animation-duration: 2s;
+}
+@keyframes  hypnotic1 {
+  100% {transform:rotate(1turn)}
+}
+.custom-loader-hypnotic2 {
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  border:2px solid #766DF4;
+  position: relative;
+  transform-origin: left;
+  animation:  hypnotic2  1s infinite linear;
+}
+.custom-loader-hypnotic2::before,
+.custom-loader-hypnotic2::after {
+  content: "";
+  position: absolute;
+  inset:0 0 auto;
+  margin:auto;
+  width:50%;
+  height:50%;
+  border-radius: 50%;
+  border:2px solid #766DF4;
+  transform-origin: 50% calc(100% - 4px);
+  animation: inherit;
+}
+.custom-loader-hypnotic2::after {
+  inset:auto 0 calc(100% + 2px);
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+  transform-origin: 50% calc(200% - 2px);
+}
+@keyframes  hypnotic2 {
+  100% {transform:rotate(1turn)}
+}
+.custom-loader-hypnotic3 {
+  width:50px;
+  height:50px;
+  border:2px solid #766DF4;
+  background:
+    conic-gradient(from -90deg at calc(100% - 2px) calc(100% - 2px),#0000 0 90deg,#766DF4 0),
+    conic-gradient(from -90deg at calc(100% - 2px) calc(100% - 2px),#0000 0 90deg,#766DF4 0);
+  background-size: 16px 16px;
+  background-position: 0 0;
+  animation:  hypnotic3  1s infinite;
+}
+
+@keyframes  hypnotic3 {
+  100% {background-position: -16px -16px,16px 16px}
+}
+.custom-loader-hypnotic4 {
+  width:50px;
+  height:50px;
+  border:2px solid #766DF4;
+  background:
+    radial-gradient(farthest-side,#0000 calc(100% - 3px),#766DF4 calc(100% - 2px) 98%,#0000),
+    radial-gradient(farthest-side,#0000 calc(100% - 3px),#766DF4 calc(100% - 2px) 98%,#0000);
+  background-size: 23px 23px;
+  background-position: 0 0,12px 12px;
+  animation:  hypnotic4  1s infinite;
+}
+
+@keyframes  hypnotic4 {
+  100% {background-position: -23px 0px,12px 35px}
+}
+.custom-loader-hypnotic5 {
+  width:50px;
+  height:calc(50px*0.866);
+  display: grid;
+  background:
+    linear-gradient(to bottom left ,#0000 calc(50% - 1px),#766DF4 0 calc(50% + 1px),#0000 0) right/50% 100%,
+    linear-gradient(to bottom right,#0000 calc(50% - 1px),#766DF4 0 calc(50% + 1px),#0000 0) left /50% 100%,
+    linear-gradient(#766DF4 0 0) bottom/100% 2px;
+  background-repeat: no-repeat;
+  transform-origin: 50% 66%;
+  animation:  hypnotic5  4s infinite linear;
+}
+
+.custom-loader-hypnotic5::before,
+.custom-loader-hypnotic5::after {
+  content: "";
+  grid-area: 1/1;
+  background:inherit;
+  transform-origin: inherit;
+  animation: inherit;
+}
+.custom-loader-hypnotic5::after {
+  animation-duration: 2s;
+}
+
+@keyframes  hypnotic5 {
+  100% {transform:rotate(1turn)}
+}
+.custom-loader-hypnotic6 {
+  width:50px;
+  height:50px;
+  display: grid;
+  background:
+    linear-gradient(90deg,#766DF4 2px,#0000 0 calc(100% - 2px),#766DF4 0) center/100% 14px,
+    linear-gradient(0deg, #766DF4 2px,#0000 0 calc(100% - 2px),#766DF4 0) center/14px 100%,
+    linear-gradient(#766DF4 0 0) center/100% 2px,
+    linear-gradient(#766DF4 0 0) center/2px 100%;
+  background-repeat: no-repeat;
+  animation:  hypnotic6  4s infinite linear;
+}
+
+.custom-loader-hypnotic6::before,
+.custom-loader-hypnotic6::after {
+  content: "";
+  grid-area: 1/1;
+  background:inherit;
+  transform-origin: inherit;
+  animation: inherit;
+}
+.custom-loader-hypnotic6::after {
+  animation-duration: 2s;
+}
+
+@keyframes  hypnotic6 {
+  100% {transform:rotate(1turn)}
+}
+.custom-loader-hypnotic7 {
+  width:50px;
+  height:50px;
+  border:2px solid #766DF4;
+  background:
+    repeating-conic-gradient(#0000 0 90deg,#766DF4 0 180deg),
+    repeating-conic-gradient(#766DF4 0 90deg,#0000 0 180deg);
+  background-size: 16px 16px;
+  background-position: 0 0;
+  animation:  hypnotic7  2s infinite;
+}
+
+@keyframes  hypnotic7 {
+  100% {background-position: 0px 32px,16px 0px}
+}
+.custom-loader-hypnotic8 {
+  width:50px;
+  height:50px;
+  border:2px solid #766DF4;
+  background:
+    radial-gradient(farthest-side,#766DF4 90%,#0000),
+    radial-gradient(farthest-side,#0000 90%,#766DF4);
+  background-size: 16px 16px;
+  background-position: 0 0;
+  animation:  hypnotic8  2s infinite;
+}
+
+@keyframes  hypnotic8 {
+  100% {background-position: 0px 32px,-16px 0}
+}
+.custom-loader-hypnotic9 {
+  width:50px;
+  height:50px;
+  position: relative;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#0000,#766DF4 1deg 18deg,#0000 20deg 36deg);
+  animation:  hypnotic9  4s infinite linear;
+}
+
+.custom-loader-hypnotic9::before{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset:0;
+  background:inherit;
+  animation: inherit;
+}
+
+@keyframes  hypnotic9 {
+  100% {transform:rotate(.5turn)}
+}
+.custom-loader-hypnotic10 {
+  width:50px;
+  height:50px;
+  display: grid;
+}
+
+.custom-loader-hypnotic10::before,
+.custom-loader-hypnotic10::after{
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#0000,#766DF4 1deg 18deg,#0000 20deg 36deg);
+  -webkit-mask:repeating-radial-gradient(farthest-side,#000 0 10%,#0000 0 20%);
+  animation:  hypnotic10  4s infinite linear;
+}
+
+.custom-loader-hypnotic10::after{
+  -webkit-mask:repeating-radial-gradient(farthest-side,#0000 0 10%,#000 0 20%);
+  animation-direction: reverse;
+}
+
+@keyframes  hypnotic10  {
+  100% {transform:rotate(.5turn)}
+}
+.custom-loader-hypnotic11 {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #766DF4;
+  border-radius: 50%;
+  display: grid;
+  animation:  hypnotic11  1.5s infinite linear;
+  transform-origin: 50% 80%;
+}
+.custom-loader-hypnotic11:before,
+.custom-loader-hypnotic11:after {
+  content:"";
+  grid-area: 1/1;
+  border:inherit;
+  border-radius: 50%;
+  animation: inherit;
+  animation-duration: 1s;
+  transform-origin: inherit;
+}
+.custom-loader-hypnotic11:after {
+  --s:-1;
+}
+
+@keyframes  hypnotic11  {
+   100% {transform:rotate(calc(var(--s,1)*1turn))}
+}
+.custom-loader-hypnotic12 {
+  width: 60px;
+  height: 25px;
+  border: 2px solid #766DF4;
+  border-radius: 50%;
+  display: grid;
+  animation:  hypnotic12  2s infinite linear;
+}
+.custom-loader-hypnotic12:before,
+.custom-loader-hypnotic12:after {
+  content:"";
+  grid-area: 1/1;
+  border:inherit;
+  border-radius: 50%;
+  animation: inherit;
+  animation-duration: 3s;
+}
+.custom-loader-hypnotic12:after {
+  --s:-1;
+}
+
+@keyframes  hypnotic12  {
+   100% {transform:rotate(calc(var(--s,1)*1turn))}
+}
+.custom-loader-hypnotic13 {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  background:
+    radial-gradient(farthest-side at bottom,#0000 calc(100% - 5px),#766DF4 calc(100% - 4px) 96%,#0000) 0 0,
+    radial-gradient(farthest-side at top   ,#0000 calc(100% - 5px),#766DF4 calc(100% - 4px) 96%,#0000) 100% 100%;
+  background-size:calc(50% + 2px) 50%;
+  background-repeat: no-repeat;
+  animation:  hypnotic13  2s infinite linear;
+}
+.custom-loader-hypnotic13:before {
+  content:"";
+  flex:1;
+  background:inherit;
+  transform:rotate(90deg);
+}
+
+@keyframes  hypnotic13  {
+   100% {transform:rotate(1turn)}
+}
+.custom-loader-hypnotic14 {
+  width: 60px;
+  height: 30px;
+  display: grid;
+  background:
+    radial-gradient(farthest-side at bottom,#0000 calc(100% - 5px),#766DF4 calc(100% - 4px) 96%,#0000) 0 0,
+    radial-gradient(farthest-side at top   ,#0000 calc(100% - 5px),#766DF4 calc(100% - 4px) 96%,#0000) 100% 100%;
+  background-size:calc(50% + 2px) 50%;
+  background-repeat: no-repeat;
+  animation:  hypnotic14  1.5s infinite linear;
+}
+.custom-loader-hypnotic14:before,
+.custom-loader-hypnotic14:after {
+  content:"";
+  grid-area:1/1;
+  background:inherit;
+  animation: inherit;
+  animation-duration: 2s;
+}
+.custom-loader-hypnotic14:after {
+  --s:-1;
+}
+
+@keyframes  hypnotic14  {
+   100% {transform:rotate(calc(var(--s,1)*1turn))}
+}
+.custom-loader-hypnotic15 {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #766DF4;
+  background: 
+    conic-gradient(from 180deg at 50% calc(100% - 2px),#766DF4 90deg, #0000 0),
+    conic-gradient(from 180deg at 50% calc(100% - 2px),#766DF4 90deg, #0000 0);
+  background-position: 0 0,8px 0;
+  background-size: 16px 9.6px;
+  animation:  hypnotic15  1s infinite;
+}
+
+@keyframes  hypnotic15  {
+  100% {background-position: 0 -9.6px,8px 9.6px}
+}
+.custom-loader-hypnotic16 {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #766DF4;
+}
+.custom-loader-hypnotic16::before {
+  content: "";
+  position: absolute;
+  inset:-48px;
+  background: 
+    conic-gradient(from 180deg at 50% calc(100% - 2px),#766DF4 90deg, #0000 0),
+    conic-gradient(from 180deg at 50% calc(100% - 2px),#766DF4 90deg, #0000 0);
+  background-position: 0 0,8px 0;
+  background-size: 16px 9.6px;
+  animation:  hypnotic16  2s infinite;
+}
+
+@keyframes  hypnotic16  {
+  50%  {background-position: 0 -9.6px ,8px 9.6px; transform:rotate(90deg)}
+  100% {background-position: 0 -19.2px,8px 19.2px;transform:rotate(180deg)}
+}
+.custom-loader-hypnotic17 {
+  width: 30px;
+  height: calc(30px*1.732);
+  display: grid;
+  background:
+    linear-gradient(#766DF4 0 0) top   /100% 1px,
+    linear-gradient(#766DF4 0 0) bottom/100% 1px,
+    linear-gradient(to bottom right, #0000 calc(50% - 2px),#766DF4 calc(50% - 1px),#0000 50%) top/100% calc(100% + 2px),
+    linear-gradient(to bottom left , #0000 calc(50% - 2px),#766DF4 calc(50% - 1px),#0000 50%) top/100% calc(100% + 2px); 
+  background-repeat: no-repeat;
+  animation:  hypnotic17  4s infinite linear;
+}
+.custom-loader-hypnotic17::before,
+.custom-loader-hypnotic17::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  border:inherit;
+  animation: inherit;
+}
+
+.custom-loader-hypnotic17::after {
+  animation-duration: 2s;
+}
+
+@keyframes  hypnotic17  {
+  100% {transform: rotate(1turn)}
+}
+.custom-loader-hypnotic18 {
+  width: 25px;
+  height: 50px;
+  display: grid;
+  background:
+    linear-gradient(#766DF4 0 0) top/100% 2px,
+    radial-gradient(farthest-side at  top, #0000 calc(100% - 2px),#766DF4 calc(100% - 1px) ,#0000) top,
+    linear-gradient(#766DF4 0 0) bottom/100% 2px,
+    radial-gradient(farthest-side at  bottom, #0000 calc(100% - 2px),#766DF4 calc(100% - 1px) ,#0000) bottom;
+  background-size: 100% 1px,100% 50%; 
+  background-repeat: no-repeat;
+  animation:  hypnotic18  4s infinite linear;
+}
+.custom-loader-hypnotic18::before,
+.custom-loader-hypnotic18::after {
+  content: "";
+  grid-area: 1/1;
+  background: inherit;
+  border:inherit;
+  animation: inherit;
+}
+
+.custom-loader-hypnotic18::after {
+  animation-duration: 2s;
+}
+
+@keyframes  hypnotic18  {
+  100% {transform: rotate(1turn)}
+}
+.custom-loader-hypnotic19 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+}
+
+.custom-loader-hypnotic19::before,
+.custom-loader-hypnotic19::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: repeating-radial-gradient(farthest-side,#0000 0%,#766DF4 1% 10%,#0000 11% 30%);
+  -webkit-mask: repeating-conic-gradient(#000 0 36deg,#0000 0 72deg);
+  animation:  hypnotic19  4s infinite linear;
+}
+.custom-loader-hypnotic19::after {
+  -webkit-mask: repeating-conic-gradient(#0000 0 36deg,#000 0 72deg);
+  animation-direction: reverse;
+}
+
+@keyframes  hypnotic19  {
+  100% {transform:rotate(1turn)}
+}
+.custom-loader-hypnotic20 {
+  width: 50px;
+  height: 50px;    
+  --g: #0000 calc(100% - 5px),#766DF4 calc(100% - 3px) 93%,#0000;
+  background: 
+    radial-gradient(farthest-side at bottom,var(--g)) top                  /100% 50%,
+    radial-gradient(farthest-side at top   ,var(--g)) bottom 18% right  0  /80%  40%,
+    radial-gradient(farthest-side at bottom,var(--g)) left   50% top    30%/60%  30%,
+    radial-gradient(farthest-side at top   ,var(--g)) right  34% bottom 37%/40%  20%,
+    radial-gradient(farthest-side at bottom,var(--g)) left   52% top    43%/24%  12%;
+  background-repeat: no-repeat;
+  animation:  hypnotic20  1s infinite linear;
+}
+
+@keyframes  hypnotic20  {
+  100% {transform: rotate(1turn)}
+}

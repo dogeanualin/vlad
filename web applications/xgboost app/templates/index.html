@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>XGBoost Sales Forecasting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        .container {
+            flex: 1;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        form {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        select {
+            padding: 5px;
+            width: 200px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        img {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>XGBoost Sales Forecasting</h1>
+    </div>
+    
+    <div class="container">
+        <form method="POST" action="/predict">
+            <label for="sales_type">Select Sales Type:</label>
+            <select name="sales_type" id="sales_type">
+                <option value="Total Sales">Total Sales</option>
+                <option value="Weekly Sales">Weekly Sales</option>
+                <option value="Hourly Sales">Hourly Sales</option>
+            </select>
+            <button type="submit">Predict and Visualize</button>
+        </form>
+        
+        {% if image %}
+            <img src="data:image/png;base64,{{ image }}" alt="Sales Forecast" />
+        {% endif %}
+        
+        {% if mse %}
+            <p>Mean Squared Error (MSE): {{ mse }}</p>
+        {% endif %}
+    </div>
+    
+    <div class="footer">
+        &copy; 2023 XGBoost Sales Forecasting. All rights reserved.
+    </div>
+</body>
+</html>

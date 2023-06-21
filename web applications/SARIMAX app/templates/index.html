@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Forecasting SARIMAX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        select {
+            padding: 8px 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sales Forecasting SARIMAX</h1>
+    <form method="POST" action="/">
+        <label for="sales_type">Select Sales Type:</label>
+        <select name="sales_type" id="sales_type">
+            <option value="Total">Total</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Hourly">Hourly</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Show Results">
+    </form>
+</body>
+</html>

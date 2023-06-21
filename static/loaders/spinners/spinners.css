@@ -1,0 +1,608 @@
+.custom-loader-spinners1 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:8px solid;
+  border-color:#766DF4 #0000;
+  animation: spinners1  1s infinite;
+}
+@keyframes  spinners1  {to{transform: rotate(.5turn)}}
+.custom-loader-spinners2 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:8px solid;
+  border-color:#E4E4ED;
+  border-right-color: #766DF4;
+  animation: spinners2  1s infinite linear;
+}
+@keyframes  spinners2  {to{transform: rotate(1turn)}}
+.custom-loader-spinners3 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:conic-gradient(#0000 10%,#766DF4);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: spinners3  1s infinite linear;
+}
+@keyframes  spinners3  {to{transform: rotate(1turn)}}
+.custom-loader-spinners4 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  padding:3px;
+  background: 
+    radial-gradient(farthest-side,#766DF4 95%,#0000) 50% 0/12px 12px no-repeat,
+    radial-gradient(farthest-side,#0000 calc(100% - 5px),#766DF4 calc(100% - 4px)) content-box;
+  animation: spinners4  2s infinite ;
+}
+@keyframes  spinners4  {to{transform: rotate(1turn)}}
+.custom-loader-spinners5 {
+  width:50px;
+  height:50px;
+  --c:radial-gradient(farthest-side,#766DF4 92%,#0000);
+  background: 
+    var(--c) 50% 0,
+    var(--c) 50% 100%,
+    var(--c) 100% 50%,
+    var(--c) 0    50%;
+  background-size:12px 12px;
+  background-repeat:no-repeat;
+  animation: spinners5  1s infinite;
+}
+@keyframes  spinners5  {to{transform: rotate(.5turn)}}
+.custom-loader-spinners6 {
+  width:50px;
+  height:50px;
+  color:#766DF4;
+  --c:radial-gradient(farthest-side,currentColor 92%,#0000);
+  background: 
+    var(--c) 50% 0   /12px 12px,
+    var(--c) 50% 100%/12px 12px,
+    var(--c) 100% 50%/12px 12px,
+    var(--c) 0    50%/12px 12px,
+    var(--c) 50%  50%/12px 12px,
+    linear-gradient(currentColor 0 0) 50% 50%/4px 100%,
+    linear-gradient(currentColor 0 0) 50% 50%/100% 4px;
+  background-repeat:no-repeat;
+  animation: spinners6  1s infinite linear;
+}
+@keyframes  spinners6  {to{transform: rotate(.5turn)}}
+.custom-loader-spinners7 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background: 
+    radial-gradient(farthest-side,#766DF4 95%,#0000) 50% 1px/12px 12px no-repeat,
+    radial-gradient(farthest-side,#0000 calc(100% - 14px),#E4E4ED 0);
+  animation: spinners7  2s infinite linear;
+}
+@keyframes  spinners7  {to{transform: rotate(1turn)}}
+.custom-loader-spinners8 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  color:#766DF4;
+  background: 
+    linear-gradient(currentColor 0 0) center/100% 4px,
+    linear-gradient(currentColor 0 0) center/4px 100%,
+    radial-gradient(farthest-side,#0000 calc(100% - 6px),currentColor calc(100% - 5px)),
+    radial-gradient(circle 6px,currentColor 94%,#0000 0);
+  background-repeat: no-repeat;
+  animation: spinners8  2s infinite linear;
+  position: relative;
+}
+.custom-loader-spinners8:before {
+  content: "";
+  position: absolute;
+  inset:0;
+  border-radius: inherit;
+  background:inherit;
+  transform:rotate(45deg);
+}
+@keyframes  spinners8  {to{transform: rotate(.5turn)}}
+.custom-loader-spinners9 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 6px;
+  background:
+    conic-gradient(from 135deg at top,#766DF4 90deg, #0000 0) 0 calc(50% - 4px)/17px 8.5px,
+    radial-gradient(farthest-side at bottom left,#0000 calc(100% - 6px),#766DF4 calc(100% - 5px) 99%,#0000) top right/50%  50% content-box content-box,
+    radial-gradient(farthest-side at top        ,#0000 calc(100% - 6px),#766DF4 calc(100% - 5px) 99%,#0000) bottom   /100% 50% content-box content-box;
+  background-repeat: no-repeat;
+  animation: spinners9  1s infinite linear;
+}
+
+@keyframes  spinners9 { 
+  100%{transform: rotate(1turn)}
+}
+.custom-loader-spinners10 {
+    width: 50px;
+    height: 50px;
+    display: grid;
+}
+.custom-loader-spinners10::before,
+.custom-loader-spinners10::after {    
+    content:"";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side,#766DF4 92%,#0000);
+    background: 
+      var(--c) 50%  0, 
+      var(--c) 50%  100%, 
+      var(--c) 100% 50%, 
+      var(--c) 0    50%;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    animation:  spinners10  1s infinite;
+}
+.custom-loader-spinners10::before {
+  margin:4px;
+  filter:hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear
+}
+
+@keyframes  spinners10 { 
+  100%{transform: rotate(.5turn)}
+}
+.custom-loader-spinners11 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#766DF4 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#766DF4);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: spinners11  1s infinite linear;
+}
+
+@keyframes  spinners11 { 
+  100%{transform: rotate(1turn)}
+}
+.custom-loader-spinners12 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  animation:  spinners12  4s infinite;
+}
+.custom-loader-spinners12::before,
+.custom-loader-spinners12::after {    
+  content:"";
+  grid-area: 1/1;
+  border:8px solid;
+  border-radius: 50%;
+  border-color:#766DF4 #766DF4 #0000 #0000;
+  mix-blend-mode: darken;
+  animation:  spinners12  1s infinite linear;
+}
+.custom-loader-spinners12::after {
+  border-color:#0000 #0000 #E4E4ED #E4E4ED;
+  animation-direction: reverse;
+}
+
+@keyframes  spinners12 { 
+  100%{transform: rotate(1turn)}
+}
+.custom-loader-spinners13 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border:4px solid #0000;
+  border-radius: 50%;
+  border-right-color:#766DF4;
+  animation:  spinners13  1s infinite linear;
+}
+.custom-loader-spinners13::before,
+.custom-loader-spinners13::after {    
+  content:"";
+  grid-area: 1/1;
+  margin:2px;
+  border:inherit;
+  border-radius: 50%;
+  animation:  spinners13  2s infinite;
+}
+.custom-loader-spinners13::after {
+  margin:8px;
+  animation-duration: 3s;
+}
+
+@keyframes  spinners13 { 
+  100%{transform: rotate(1turn)}
+}
+.custom-loader-spinners14 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border:4px solid #0000;
+  border-radius: 50%;
+  border-color:#E4E4ED #0000;
+  animation:  spinners14  1s infinite linear;
+}
+.custom-loader-spinners14::before,
+.custom-loader-spinners14::after {    
+  content:"";
+  grid-area: 1/1;
+  margin:2px;
+  border:inherit;
+  border-radius: 50%;
+}
+.custom-loader-spinners14::before {
+  border-color:#766DF4 #0000;
+  animation:inherit; 
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+.custom-loader-spinners14::after {
+  margin:8px;
+}
+
+@keyframes  spinners14  { 
+  100%{transform: rotate(1turn)}
+}
+.custom-loader-spinners15 {
+  width: 70px;
+  height: 70px;
+  background:
+    radial-gradient(farthest-side,#766DF4 90%,#0000) center/16px 16px,
+    radial-gradient(farthest-side,#6F6D91   90%,#0000) bottom/12px 12px;
+  background-repeat: no-repeat;
+  animation:  spinners15  1s infinite linear;
+  position: relative;
+}
+.custom-loader-spinners15::before {    
+  content:"";
+  position: absolute;
+  width:8px;
+  height:8px;
+  inset:auto 0 16px;
+  margin: auto;
+  background:#E4E4ED;
+  border-radius: 50%;
+  transform-origin: 50% calc(100% + 10px);
+  animation:inherit;
+  animation-duration: 0.5s;
+}
+
+
+@keyframes  spinners15  { 
+  100%{transform: rotate(1turn)}
+}
+.custom-loader-spinners16 {
+  width: 50px;
+  height: 50px;
+  --c: radial-gradient(farthest-side,#766DF4 92%,#0000);
+  background: 
+    var(--c) 50%  0, 
+    var(--c) 50%  100%, 
+    var(--c) 100% 50%, 
+    var(--c) 0    50%;
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  animation:  spinners16  1s infinite;
+  position: relative;
+}
+.custom-loader-spinners16::before {    
+  content:"";
+  position: absolute;
+  inset:0;
+  margin: 3px;
+  background:repeating-conic-gradient(#0000 0 35deg,#766DF4 0 90deg);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+  border-radius: 50%;
+}
+
+@keyframes  spinners16  { 
+  100%{transform: rotate(.5turn)}
+}
+.custom-loader-spinners17 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color:#766DF4;
+  background: radial-gradient(farthest-side, currentColor calc(100% - 6px),#0000 calc(100% - 5px) 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 13px),#000 calc(100% - 12px));
+  border-radius: 50%;
+  animation:  spinners17  2s infinite linear;
+}
+.custom-loader-spinners17::before,
+.custom-loader-spinners17::after {    
+  content:"";
+  grid-area: 1/1;
+  background:
+    linear-gradient(currentColor 0 0) center,
+    linear-gradient(currentColor 0 0) center;
+  background-size: 100% 10px,10px 100%;
+  background-repeat: no-repeat;
+}
+.custom-loader-spinners17::after {
+   transform: rotate(45deg);
+}
+
+@keyframes  spinners17  { 
+  100%{transform: rotate(1turn)}
+}
+.custom-loader-spinners18 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid #766DF4;
+  animation:
+     spinners18 -1 0.8s infinite linear alternate,
+     spinners18 -2 1.6s infinite linear;
+}
+@keyframes  spinners18 -1{
+   0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
+   12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
+   25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
+   50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+   62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
+   75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
+   100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+}
+@keyframes  spinners18 -2{ 
+  0%    {transform:scaleY(1)  rotate(0deg)}
+  49.99%{transform:scaleY(1)  rotate(135deg)}
+  50%   {transform:scaleY(-1) rotate(0deg)}
+  100%  {transform:scaleY(-1) rotate(-135deg)}
+}
+.custom-loader-spinners19 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#766DF4 0 90deg,#E4E4ED 0 180deg);
+  animation:  spinners19  1s infinite linear;
+}
+
+@keyframes  spinners19  {
+  100% {transform: rotate(.5turn)}
+}
+.custom-loader-spinners20 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border-radius: 50%;
+  background: conic-gradient(#766DF4 25%,#E4E4ED 0 50%,#6F6D91 0 75%,#766DF4 0);
+  animation:  spinners20  2s infinite linear;
+}
+.custom-loader-spinners20::before,
+.custom-loader-spinners20::after {
+   content:"";
+   grid-area: 1/1;
+   margin:15%;
+   border-radius: 50%;
+   background:inherit;
+   animation:inherit;
+}
+.custom-loader-spinners20::after {
+   margin:25%;
+   animation-duration: 3s;
+}
+
+@keyframes  spinners20  {
+  100% {transform: rotate(1turn)}
+}
+.custom-loader-spinners21 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  border-radius: 50%;
+  -webkit-mask:radial-gradient(farthest-side,#0000 40%,#000 41%);
+  background:
+    linear-gradient(0deg ,#766DF480 50%,#766DF4FF 0) center/4px 100%,
+    linear-gradient(90deg,#766DF440 50%,#766DF4BF 0) center/100% 4px;
+  background-repeat: no-repeat;
+  animation:  spinners21  1s infinite steps(12);
+}
+.custom-loader-spinners21::before,
+.custom-loader-spinners21::after {
+   content:"";
+   grid-area: 1/1;
+   border-radius: 50%;
+   background:inherit;
+   opacity: 0.915;
+   transform: rotate(30deg);
+}
+.custom-loader-spinners21::after {
+   opacity: 0.83;
+   transform: rotate(60deg);
+}
+
+@keyframes  spinners21  {
+  100% {transform: rotate(1turn)}
+}
+.custom-loader-spinners22 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid #0000;
+  border-right-color: #766DF497;
+  position: relative;
+  animation:  spinners22  1s infinite linear;
+}
+.custom-loader-spinners22:before,
+.custom-loader-spinners22:after {
+  content: "";
+  position: absolute;
+  inset:-8px;
+  border-radius: 50%;
+  border:inherit;
+  animation:inherit;
+  animation-duration: 2s;
+}
+.custom-loader-spinners22:after {
+  animation-duration: 4s;
+}
+
+@keyframes  spinners22  {
+  100% {transform: rotate(1turn)}
+}
+.custom-loader-spinners23 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background:#766DF4;
+  -webkit-mask:radial-gradient(circle closest-side at 50% 40%,#0000 94%, #000);
+  transform-origin: 50% 40%;
+  animation:  spinners23  1s infinite linear;
+}
+
+@keyframes  spinners23  {
+  100% {transform: rotate(1turn)}
+}
+.custom-loader-spinners24 {
+  width: 40px;
+  height: 10px;
+  color: #766DF4;
+  background:
+    radial-gradient(farthest-side,currentColor 90%,#0000) left  /10px 10px,
+    radial-gradient(farthest-side,currentColor 90%,#0000) center/10px 10px,
+    radial-gradient(farthest-side,currentColor 90%,#0000) right /10px 10px,
+    linear-gradient(currentColor 0 0) center/100% 4px; 
+  background-repeat: no-repeat;
+  position: relative;
+  animation:  spinners24  2s infinite linear;
+}
+.custom-loader-spinners24:before,
+.custom-loader-spinners24:after {
+  content: "";
+  position: absolute;
+  inset:0;
+  background:inherit;
+  animation:inherit;
+  --s:calc(50% - 5px);
+  animation-direction: reverse;
+}
+.custom-loader-spinners24:after {
+  --s:calc(5px - 50%);
+}
+
+@keyframes  spinners24  {
+  0%   {transform: translate(var(--s,0)) rotate(0)}
+  100% {transform: translate(var(--s,0)) rotate(1turn)}
+}
+.custom-loader-spinners25 {
+  --d:22px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #766DF4;
+  box-shadow: 
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d))      calc(1*var(--d))     0 2px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+  animation:  spinners25  1s infinite steps(8);
+}
+
+@keyframes  spinners25  {
+  100% {transform: rotate(1turn)}
+}
+.custom-loader-spinners26 {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  color: #766DF4;
+  background: 
+    linear-gradient(currentColor 0 0) center/100% 3px,
+    linear-gradient(currentColor 0 0) center/3px 100%;
+  background-repeat: no-repeat;
+  animation:  spinners26  2s infinite;
+}
+
+.custom-loader-spinners26::before,
+.custom-loader-spinners26::after {
+  content: "";
+  grid-area: 1/1;
+  background: repeating-conic-gradient(#0000 0 35deg,currentColor 0 90deg);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0);
+  border-radius: 50%;
+}
+.custom-loader-spinners26::after {
+  margin:20%;
+}
+
+@keyframes  spinners26  {
+  100% {transform: rotate(1turn)}
+}
+.custom-loader-spinners27 {
+  --s:8px;
+  width: 50px;
+  height: 50px;
+  background: #766DF4;
+  border-radius: 50%;
+  animation:  spinners27  2s infinite linear;
+  clip-path: polygon(0 0,calc(50% - var(--s)) 0,50% var(--s),calc(50% + var(--s)) 0,100% 0,100% calc(50% - var(--s)),calc(100% - var(--s)) 50%,100% calc(50% + var(--s)),100% 100%,calc(50% + var(--s)) 100%, 50% calc(100% - var(--s)),calc(50% - var(--s)) 100%,0 100%,0 calc(50% + var(--s)), var(--s) 50%, 0 calc(50% - var(--s)));
+}
+
+@keyframes  spinners27  {
+  100% {transform: rotate(1turn)}
+}
+.custom-loader-spinners28 {
+  --R:30px;
+  --g1:#766DF4 96%, #0000;
+  --g2:#E4E4ED 96%, #0000;
+  width: calc(2*var(--R));
+  height:calc(2*var(--R));
+  border-radius:50%;
+  display: grid;
+  -webkit-mask:linear-gradient(#000 0 0);
+  animation:  spinners28  2s infinite linear;
+}
+
+.custom-loader-spinners28::before,
+.custom-loader-spinners28::after{
+  content:"";
+  grid-area: 1/1;
+  width:50%;
+  background:
+    radial-gradient(farthest-side,var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),
+    radial-gradient(farthest-side,var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),
+    radial-gradient(farthest-side,var(--g2)) calc(var(--R) + 0.5*var(--R)   - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),
+    radial-gradient(farthest-side,var(--g1)) 0 calc(-1*var(--R)),
+    radial-gradient(farthest-side,var(--g2)) calc(var(--R) - 0.5*var(--R)   - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),
+    radial-gradient(farthest-side,var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),
+    radial-gradient(farthest-side,var(--g2)) calc(-1*var(--R))  0,
+    radial-gradient(farthest-side,var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) + 0.5*var(--R)   - var(--R));
+   background-size:calc(2*var(--R)) calc(2*var(--R));
+   background-repeat:no-repeat;
+}
+
+.custom-loader-spinners28::after {
+ transform:rotate(180deg);
+ transform-origin:right;
+}
+
+@keyframes  spinners28  {
+  100% {transform: rotate(-1turn)}
+}
+.custom-loader-spinners29 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  padding:1px;
+  background:conic-gradient(#0000 10%,#766DF4) content-box;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+    radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 8px));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: spinners29  1s infinite steps(10);
+}
+@keyframes  spinners29  {to{transform: rotate(1turn)}}
+.custom-loader-spinners30 {
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:#766DF4;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg,#000 1deg 70deg,#0000 71deg 90deg),
+    radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 calc(100% - 8px));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: spinners30  1s infinite ;
+}
+@keyframes  spinners30  {to{transform: rotate(.5turn)}}

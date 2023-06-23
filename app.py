@@ -4,7 +4,7 @@ import eda
 from sarimax import predict_and_visualize
 from xgboostpredict import predict
 import LSTM
-
+import databasegr
 
 app = Flask(__name__)
 
@@ -75,7 +75,7 @@ def xgboost():
 @app.route('/lstm')
 def lstm():
     menu = "lstm"
-    # Forecast total sales
+
     predictions1 = LSTM.forecast_sales(LSTM.scaled_data1, LSTM.scaler1, LSTM.model1)
 
     # Forecast weekly sales
@@ -117,9 +117,40 @@ def lstm():
 
     return render_template('lstm/lstm.html', image1=image_base64_1, image2=image_base64_2, image3=image_base64_3,menu=menu)
 
+@app.route('/database')
+def database():
+    # Fetch the table names from the database
+
+    menu = "lstm"
+    return render_template('database/database.html',menu=menu )
+@app.route('/database/<database>')
+def show_tables(database):
+    # Fetch the table names from the database
+    tables = databasegr.fetch_table_names(database)
+
+    return render_template('database/tables.html', database=database, tables=tables)
 
 
+@app.route('/database/<database>/<table_name>')
+def show_table_columns(database, table_name):
+    # Select the appropriate database based on the button click
+    if database == "OLAP Database":
+        cnx = databasegr.olap_cnx
+        cursor = databasegr.olap_cursor
+    elif database == "OLTP Database":
+        cnx = databasegr.oltp_cnx
+        cursor = databasegr.oltp_cursor
+    else:
+        return "Invalid database"
+
+    # Fetch the column names from the selected table
+    cursor.execute(f"SHOW COLUMNS FROM {table_name}")
+    columns = cursor.fetchall()
+
+    return render_template('database/columns.html', database=database, table_name=table_name, columns=columns)
 
 
 if __name__ == '__main__':
     app.run()
+    app.run(debug=True)
+    databasegr.window.mainloop()

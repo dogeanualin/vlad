@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+    <h1>Database Viewer - Tables</h1>
+    <h2>{{ database }}</h2>
+    <p>Tables:</p>
+    <ul>
+        {% for table in tables %}
+        <li><a href="/database/{{ database }}/{{ table }}">{{ table }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

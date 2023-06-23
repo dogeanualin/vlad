@@ -103,49 +103,7 @@ def forecast_sales(sales_ts, scaler, model):
     return predictions
 
 
-@app.route('/')
-def index():
-    # Forecast total sales
-    predictions1 = forecast_sales(scaled_data1, scaler1, model1)
 
-    # Forecast weekly sales
-    predictions2 = forecast_sales(scaled_data2, scaler2, model2)
-
-    # Forecast daily sales
-    predictions3 = forecast_sales(scaled_data3, scaler3, model3)
-
-    # Convert the figures to base64 encoded strings
-    fig1 = Figure(figsize=(10, 6))
-    ax1 = fig1.add_subplot(111)
-    ax1.plot(sales_ts1.index[train_size + n_steps:], sales_ts1[train_size + n_steps:], label='Actual Sales')
-    ax1.plot(sales_ts1.index[train_size + n_steps:], predictions1, label='Forecasted Sales')
-    ax1.set_xlabel('Time')
-    ax1.set_ylabel('Product Sales')
-    ax1.set_title('Actual vs Forecasted Sales (Total)')
-    ax1.legend()
-    image_base64_1 = fig_to_base64(fig1)
-
-    fig2 = Figure(figsize=(10, 6))
-    ax2 = fig2.add_subplot(111)
-    ax2.plot(sales_ts2.index[train_size + n_steps:], sales_ts2[train_size + n_steps:], label='Actual Sales')
-    ax2.plot(sales_ts2.index[train_size + n_steps:], predictions2, label='Forecasted Sales')
-    ax2.set_xlabel('Time')
-    ax2.set_ylabel('Product Sales')
-    ax2.set_title('Actual vs Forecasted Sales (Weekly)')
-    ax2.legend()
-    image_base64_2 = fig_to_base64(fig2)
-
-    fig3 = Figure(figsize=(10, 6))
-    ax3 = fig3.add_subplot(111)
-    ax3.plot(sales_ts3.index[train_size + n_steps:], sales_ts3[train_size + n_steps:], label='Actual Sales')
-    ax3.plot(sales_ts3.index[train_size + n_steps:], predictions3, label='Forecasted Sales')
-    ax3.set_xlabel('Time')
-    ax3.set_ylabel('Product Sales')
-    ax3.set_title('Actual vs Forecasted Sales (Daily)')
-    ax3.legend()
-    image_base64_3 = fig_to_base64(fig3)
-
-    return render_template('index.html', image1=image_base64_1, image2=image_base64_2, image3=image_base64_3)
 
 
 def fig_to_base64(fig):

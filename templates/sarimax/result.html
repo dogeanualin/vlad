@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block content %}
+<nav style="--cmsAti-breadcrumb-divider: '&gt;&gt;';" aria-label="breadcrumb">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item"><a href="{{ url_for('home') }}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="{{ url_for('sarimax') }}">Back</a></li>
+  </ol>
+</nav>
+    <h1>Sales Forecasting Results</h1>
+    <h2>Forecasted Sales Visualization</h2>
+    <img src="data:image/png;base64,{{ image }}" alt="Forecasted Sales">
+    <br><br>
+    <h2>Mean Squared Error (MSE): {{ mse }}</h2>
+{% endblock content %}

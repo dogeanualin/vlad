@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+    <h1>Sales Forecasting XGBOOST</h1>
+    <form method="POST" action="/xgboost">
+        <label for="sales_type">Select Sales Type:</label>
+        <select name="sales_type" id="sales_type">
+            <option value="Total Sales">Total Sales</option>
+                <option value="Weekly Sales">Weekly Sales</option>
+                <option value="Hourly Sales">Hourly Sales</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Show Results">
+    </form>
+{% endblock content %}

@@ -8,7 +8,7 @@ import base64
 app = Flask(__name__)
 
 # Load the dataset
-df= pd.read_csv("grocery_final_dataset.csv")
+df= pd.read_csv(r"C:\Users\dogeanu.alin\PycharmProjects\flaskProject\web applications\EDA app\grocery_final_dataset.csv")
 df=df[:100]
 
 def clear_figure():

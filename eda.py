@@ -1,11 +1,8 @@
-from flask import Flask, render_template
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
-
-app = Flask(__name__)
 
 # Load the dataset
 df = pd.read_csv("data/grocery_final_dataset.csv")
@@ -187,44 +184,3 @@ def add_correlation_heatmap_visualization():
 
     return image_base64
 
-
-
-
-
-@app.route('/correlation_heatmap')
-def correlation_heatmap():
-    image_base64 = add_correlation_heatmap_visualization()
-    return render_template('correlation_heatmap.html', image=image_base64)
-
-
-@app.route('/data_distribution')
-def data_distribution():
-    image_base64 = plot_data_distribution()
-    return render_template('data_distribution.html', image=image_base64)
-
-
-# Route for product analysis visualization
-@app.route('/product_analysis')
-def product_analysis():
-    image_base64 = plot_product_analysis()
-    return render_template('product_analysis.html', image=image_base64)
-
-
-# Route for product analysis visualization
-@app.route('/order_analysis')
-def order_analysis():
-    image_base64 = plot_order_analysis()
-    return render_template('order_analysis.html', image=image_base64)
-
-
-# Route for product analysis visualization
-@app.route('/user_analysis')
-def user_analysis():
-    image_base64 = plot_user_analysis()
-    return render_template('user_analysis.html', image=image_base64)
-
-
-# Add more routes for other visualizations
-
-if __name__ == '__main__':
-    app.run(debug=True)

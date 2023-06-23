@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+    <h1>Sales Forecasting SARIMAX</h1>
+    <form method="POST" action="/sarimax">
+        <label for="sales_type">Select Sales Type:</label>
+        <select name="sales_type" id="sales_type">
+            <option value="Total">Total</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Hourly">Hourly</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Show Results">
+    </form>
+{% endblock content %}

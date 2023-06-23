@@ -23,25 +23,15 @@ train1, test1 = sales_ts1[:train_size], sales_ts1[train_size:]
 train2, test2 = sales_ts2[:train_size], sales_ts2[train_size:]
 train3, test3 = sales_ts3[:train_size], sales_ts3[train_size:]
 
-# Create the Flask app
-app = Flask(__name__)
-
-# Route for the home page
-@app.route('/')
-def home():
-    return render_template('index.html')
 
 # Route for prediction and visualization
-@app.route('/predict', methods=['POST'])
-def predict():
-    # Retrieve selected sales type
-    selected_sales_type = request.form.get('sales_type')
+def predict(sales_type):
 
-    if selected_sales_type == "Total Sales":
+    if sales_type == "Total Sales":
         train_data, test_data = train1, test1
-    elif selected_sales_type == "Weekly Sales":
+    elif sales_type == "Weekly Sales":
         train_data, test_data = train2, test2
-    elif selected_sales_type == "Hourly Sales":
+    elif sales_type == "Hourly Sales":
         train_data, test_data = train3, test3
 
     # Create and train the XGBoost regressor
@@ -63,7 +53,7 @@ def predict():
     plt.plot(test_data.index, test_data.values, 'b', label="Actual")
     plt.xlabel('Time')
     plt.ylabel('Sales')
-    plt.title(f'{selected_sales_type} - XGBoost Predicted vs Actual Sales')
+    plt.title(f'{sales_type} - XGBoost Predicted vs Actual Sales')
     plt.legend()
 
     # Convert the figure to a base64 encoded string
@@ -71,8 +61,6 @@ def predict():
     FigureCanvas(fig).print_png(output)
     image_base64 = base64.b64encode(output.getvalue()).decode('utf-8')
 
-    return render_template('index.html', image=image_base64, mse=mse)
+    return render_template('xgboost/result.html', image=image_base64, mse=mse)
 
-# Run the app
-if __name__ == '__main__':
-    app.run()
+

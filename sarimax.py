@@ -1,13 +1,13 @@
-from flask import Flask, render_template, request
+from flask import render_template
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
+
 from sklearn.metrics import mean_squared_error
 from statsmodels.tsa.statespace.sarimax import SARIMAX
 import io
 import base64
 
-app = Flask(__name__)
+
 df2 = pd.read_csv('data/train_data_grocery.csv')
 # Convert the 'product_sales' column to a time series for each dataframe
 sales_ts1 = pd.Series(df2['product_sales'].values, index=df2.index)
@@ -25,12 +25,7 @@ train_size3 = int(len(sales_ts3) * 0.8)
 train_data3, test_data3 = sales_ts3[:train_size3], sales_ts3[train_size3:]
 
 # Define the route for the index page
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    if request.method == 'POST':
-        sales_type = request.form['sales_type']
-        return predict_and_visualize(sales_type)
-    return render_template('index.html')
+
 
 # Function to predict and visualize the sales data
 def predict_and_visualize(sales_type):
@@ -72,8 +67,5 @@ def predict_and_visualize(sales_type):
     output.seek(0)
     image_base64 = base64.b64encode(output.getvalue()).decode('utf-8')
 
-    return render_template('results.html', image=image_base64, mse=mse)
+    return render_template('sarimax/result.html', image=image_base64, mse=mse)
 
-# Run the Flask app
-if __name__ == '__main__':
-    app.run()
